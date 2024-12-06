@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contattami</title>
+    <link rel="stylesheet" href="css/stile.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/logo_FC.png" alt="Logo FC" class="logo">
+            </a>
+        </div>
+        
+        <div class="menu-icon" id="menu-icon">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <ul class="menu" id="menu">
+            <li><a href="chi_sono.html">Chi sono</a></li>
+            <li><a href="lavori.html">Lavoro</a></li>
+        </ul>
+        <div class="navbar-footer hidden" id="navbar-footer">
+            <a href="https://instagram.com" target="_blank">
+                <img src="img/instagram_1.png" alt="Instagram" class="social-icon" >
+            </a>
+            <a href="https://x.com" target="_blank">
+                <img src="img/x.png" alt="X" class="social-icon">
+            </a>
+        </div>
+        
+    </div>
+
+
+    <div class="contact-container">
+        <!-- Immagine -->
+        <div class="contact-image">
+            <img src="img/contatti.jpg" alt="Contattami" class="contact-img">
+        </div>
+
+        <!-- Form -->
+        <div class="contact-form">
+            <h1>Contattami</h1>
+            <form id="contact-form">
+                <div class="form-group">
+                    <label for="name">Nome e Cognome</label>
+                    <input type="text" id="name" name="name" placeholder="Inserisci il tuo nome e cognome" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" placeholder="Inserisci la tua email" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject">Oggetto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Inserisci l'oggetto" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Messaggio</label>
+                    <textarea id="message" name="message" rows="5" placeholder="Inserisci il tuo messaggio" required></textarea>
+                </div>
+                <div class="form-group">
+                    <button type="submit" id="submit-btn">Invia</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
