@@ -60,8 +60,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 alert('Tutti i campi devono essere compilati.');
                 return;
             }
-
-            alert('Form inviato con successo!');
         });
     }
 
