@@ -35,34 +35,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Validazione form (se presente nella pagina)
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function (e) {
-            e.preventDefault(); // Previene l'invio del form per testare la validazione
-
-            const email = document.getElementById('email').value;
-            const name = document.getElementById('name').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // Controllo email
-            if (!email.includes('@')) {
-                alert('Inserisci un indirizzo email valido.');
-                return;
-            }
-
-            if (name.length < 3) {
-                alert('Il nome deve contenere almeno 3 caratteri.');
-                return;
-            }
-
-            if (subject.length === 0 || message.length === 0) {
-                alert('Tutti i campi devono essere compilati.');
-                return;
-            }
-        });
-    }
-
+    contactForm.addEventListener('submit', function (e) {
+        const email = document.getElementById('email').value;
+        const name = document.getElementById('name').value;
+        const subject = document.getElementById('subject').value;
+        const message = document.getElementById('message').value;
+    
+        // Controllo rapido
+        if (!email.includes('@') || name.length < 3 || subject.length === 0 || message.length === 0) {
+            alert('Per favore, compila tutti i campi correttamente.');
+            e.preventDefault(); // Blocca solo se i dati non sono validi
+            return;
+        }
+    
+        alert('Form inviato!'); // Solo per conferma visiva
+    });
+    
     // Gestione della tabella dei progetti
     const projectsButton = document.getElementById('leader-course');
     const projectsTable = document.getElementById('leader-table');
